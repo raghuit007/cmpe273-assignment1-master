@@ -8,7 +8,7 @@ public class Review {
 	@JsonProperty("comment")
 	private String comment;
 	
-	private long isbn;
+	
 	
 	/**
 	 * @return the id
@@ -52,11 +52,5 @@ public class Review {
 		this.comment = comment;
 	}
 
-	public long getIsbn() {
-		return isbn;
-	}
-
-	public void setIsbn(long isbn) {
-		this.isbn = isbn;
-	}
+	
 }

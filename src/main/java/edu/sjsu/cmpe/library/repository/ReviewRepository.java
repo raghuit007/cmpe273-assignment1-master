@@ -15,7 +15,7 @@ public class ReviewRepository implements ReviewRepositoryInterface {
 
 	/** Never access this key directly; instead use generateISBNKey() */
 	private Integer id;
-	private String comment;
+
 
 	public ReviewRepository(ConcurrentHashMap<Integer,Review> reviewMap) {
 		checkNotNull(reviewMap, "reviewMap must not be null for BookRepository");
