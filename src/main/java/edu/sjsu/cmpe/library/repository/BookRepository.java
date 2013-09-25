@@ -10,6 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import edu.sjsu.cmpe.library.domain.Author;
 import edu.sjsu.cmpe.library.domain.Book;
+import edu.sjsu.cmpe.library.dto.AuthorDto;
 import edu.sjsu.cmpe.library.dto.BooksDto;
 import edu.sjsu.cmpe.library.dto.LinkDto;
 
@@ -33,7 +34,7 @@ public class BookRepository implements BookRepositoryInterface {
      * @return a new incremental ISBN number
      */
     private final Long generateISBNKey() {
-	// increment existing isbnKey and return the new value
+	
 	return Long.valueOf(++isbnKey);
     }
 
@@ -68,9 +69,9 @@ public class BookRepository implements BookRepositoryInterface {
     public Book getBookByISBN(Long isbn) {
 	checkArgument(isbn > 0,
 		"ISBN was %s but expected greater than zero value", isbn);
-	
-	
-	return bookInMemoryMap.get(isbn);
+	     return bookInMemoryMap.get(isbn);
+	     
+		
     }
     
     @Override
