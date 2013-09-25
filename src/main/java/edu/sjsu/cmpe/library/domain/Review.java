@@ -1,9 +1,14 @@
  package edu.sjsu.cmpe.library.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Review {
 	private Integer id;
 	private Integer rating;
+	@JsonProperty("comment")
 	private String comment;
+	
+	private long isbn;
 	
 	/**
 	 * @return the id
@@ -36,14 +41,22 @@ public class Review {
 	/**
 	 * @return the comments
 	 */
-	public String getComments() {
+	public String getComment() {
 		return comment;
 	}
 	
 	/**
 	 * @param comments the comments to set
 	 */
-	public void setComments(String comment) {
+	public void setComment(String comment) {
 		this.comment = comment;
+	}
+
+	public long getIsbn() {
+		return isbn;
+	}
+
+	public void setIsbn(long isbn) {
+		this.isbn = isbn;
 	}
 }

@@ -1,5 +1,7 @@
 package edu.sjsu.cmpe.library.repository;
 
+import java.util.ArrayList;
+
 import edu.sjsu.cmpe.library.domain.Review;
 
 /**
@@ -22,12 +24,14 @@ public interface ReviewRepositoryInterface {
     /**
      * Retrieve an existing review by ID
      * 
-     * @param id
+     * @param 
      *            a valid ID
      * @return a review instance
      */
     Review getReviewById(Integer id);
+
+	
     
-    //ArrayList<Review> getAllReviews(long isbn);
+    ArrayList<Review> getAllReviews();
     
 }

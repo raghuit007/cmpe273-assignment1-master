@@ -10,6 +10,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import edu.sjsu.cmpe.library.domain.Author;
 import edu.sjsu.cmpe.library.domain.Book;
+import edu.sjsu.cmpe.library.dto.BooksDto;
+import edu.sjsu.cmpe.library.dto.LinkDto;
 
 public class BookRepository implements BookRepositoryInterface {
     /** In-memory map to store books. (Key, Value) -> (ISBN, Book) */
@@ -44,7 +46,7 @@ public class BookRepository implements BookRepositoryInterface {
 	// Generate new ISBN
 	Long isbn = generateISBNKey();
 	newBook.setIsbn(isbn);
-	// TODO: create and associate other fields such as author
+	
 	ArrayList<Author> authors = newBook.getAuthors();
 	int i = 0;
 	
@@ -66,6 +68,8 @@ public class BookRepository implements BookRepositoryInterface {
     public Book getBookByISBN(Long isbn) {
 	checkArgument(isbn > 0,
 		"ISBN was %s but expected greater than zero value", isbn);
+	
+	
 	return bookInMemoryMap.get(isbn);
     }
     
