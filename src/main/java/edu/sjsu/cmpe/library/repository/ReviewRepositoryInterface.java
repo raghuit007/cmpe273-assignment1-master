@@ -7,9 +7,7 @@ import edu.sjsu.cmpe.library.domain.Review;
 /**
  * Review repository interface.
  * 
- * What is repository pattern?
- * 
- * @see http://martinfowler.com/eaaCatalog/repository.html
+ 
  */
 public interface ReviewRepositoryInterface {
     /**
@@ -29,8 +27,6 @@ public interface ReviewRepositoryInterface {
      * @return a review instance
      */
     Review getReviewById(Integer id);
-
-	
     
     ArrayList<Review> getAllReviews();
     
